@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wine-model-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wine-model-app
+  template:
+    metadata:
+      labels:
+        app: wine-model-app
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: wine-model-app
+        image: nikita214/wine-model-app:latest
+        ports:
+        - containerPort: 5000
