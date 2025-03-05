@@ -43,3 +43,33 @@
    ```
    kubectl apply -f deployment.yaml
    ```
+## Полезные команды
+```
+minikube start (stop)
+minikube status
+kubectl create namespace <name>
+kubectl apply -f deployment.yaml -n <name space>
+kubectl apply -f service.yaml -n <name space>
+kubectl get pods -n <name space>
+kubectl describe pod <name pod> -n <name space>
+kubectl get service -n <name space>
+kubectl get secret
+kubectl delete pod <pod name> -n <name space>
+kubectl delete deployment <deployment_name>
+kubectl delete secrets --all
+kubectl logs <pod name> -n <name space>
+```
+### Проброс секретов
+```
+kubectl create secret docker-registry regcred \
+2    --docker-server=YOUR_DOCKER_SERVER (https://index.docker.io/v1/) \
+3    --docker-username=YOUR_USERNAME \
+4    --docker-password=YOUR_PASSWORD \
+5    --docker-email=YOUR_EMAIL \
+6    -n your-namespace
+```
+```
+docker build -t
+docker tag
+docker push
+```
