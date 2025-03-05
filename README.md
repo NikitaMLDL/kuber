@@ -74,4 +74,5 @@ docker tag
 docker push
 ```
 # Ошибки, с которыми я столкнулся:
-## Не полный requirements.txt, решение, как я понял это ``` kubectl logs <pod name> -n <name space> ```
+## Не полный requirements.txt, решение, как я понял это
+### ``` kubectl logs <pod name> -n <name space> ```
